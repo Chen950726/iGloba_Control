@@ -1,4 +1,4 @@
----
+
 
 # iGloba\_Control
 
@@ -6,7 +6,7 @@
 
 > 📦 專為 Ubuntu/Linux 系統開發，支援 iGloba Ed 開放控制協定。
 
----
+
 
 ## 📌 特色 Features
 
@@ -17,7 +17,7 @@
 * 🔄 支援資料串流模式
 * 💡 支援 LED 與馬達控制（風扇/側刷）
 
----
+
 
 ## 🔧 環境需求 Requirements
 
@@ -29,7 +29,7 @@
 pip install pyserial
 ```
 
----
+
 
 ## 🚀 安裝 Installation
 
@@ -41,7 +41,7 @@ python3 igloba_ed_controller.py
 
 > 請依照你實際的 port 修改 `controller = iGlobaEdController('/dev/ttyUSB0')`。
 
----
+
 
 ## 🕹️ 基本操作 Usage
 
@@ -77,7 +77,7 @@ sensor_data = controller.get_all_sensors()
 print(sensor_data)
 ```
 
----
+
 
 ## 📄 支援指令摘要
 
@@ -93,7 +93,7 @@ print(sensor_data)
 | LED 控制  | `controller.leds(color=1)`                                |
 | 馬達開關    | `controller.motors(side_brush=True, vacuum_fan=True)`     |
 
----
+
 
 ## 📦 支援的感測器封包 (常見 ID)
 
