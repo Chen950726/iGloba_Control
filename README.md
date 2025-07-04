@@ -39,7 +39,7 @@ cd iGloba_Control
 python3 igloba_ed_controller.py
 ```
 
-> 請依照你實際的 port 修改 `controller = iGlobaEdController('/dev/ttyUSB0')`。
+> 請依照你實際的 port 修改 `robot = iGlobaEdController('/dev/ttyUSB0')`。
 
 
 
@@ -48,32 +48,32 @@ python3 igloba_ed_controller.py
 ### 連接與啟動
 
 ```python
-controller = iGlobaEdController('/dev/ttyUSB0')
-controller.connect()
-controller.start()
-controller.full_mode()
+robot = iGlobaEdController('/dev/ttyUSB0')
+robot.connect()
+robot.start()
+robot.full_mode()
 ```
 
 ### 移動控制
 
 ```python
-controller.move_forward(speed=200, duration=2)
-controller.turn_left(duration=1)
-controller.stop_movement()
+robot.move_forward(speed=200, duration=2)
+robot.turn_left(duration=1)
+robot.stop_movement()
 ```
 
 ### 清掃控制
 
 ```python
-controller.clean()
-controller.max_clean()
-controller.seek_dock()
+robot.clean()
+robot.max_clean()
+robot.seek_dock()
 ```
 
 ### 感測器讀取
 
 ```python
-sensor_data = controller.get_all_sensors()
+sensor_data = robot.get_all_sensors()
 print(sensor_data)
 ```
 
@@ -83,15 +83,15 @@ print(sensor_data)
 
 | 功能      | 指令碼                                                       |
 | ------- | --------------------------------------------------------- |
-| 啟動 OI   | `controller.start()`                                      |
-| 進入完整模式  | `controller.full_mode()`                                  |
-| 前進 / 後退 | `controller.move_forward()`, `controller.move_backward()` |
-| 左右轉     | `controller.turn_left()`, `controller.turn_right()`       |
-| 停止      | `controller.stop_movement()`                              |
-| 清掃 / 回充 | `controller.clean()`, `controller.seek_dock()`            |
-| 讀取感測器   | `controller.read_and_parse_sensor(packet_id)`             |
-| LED 控制  | `controller.leds(color=1)`                                |
-| 馬達開關    | `controller.motors(side_brush=True, vacuum_fan=True)`     |
+| 啟動 OI   | `robot.start()`                                      |
+| 進入完整模式  | `robot.full_mode()`                                  |
+| 前進 / 後退 | `robot.move_forward()`, `robot.move_backward()` |
+| 左右轉     | `robot.turn_left()`, `robot.turn_right()`       |
+| 停止      | `robot.stop_movement()`                              |
+| 清掃 / 回充 | `robot.clean()`, `robot.seek_dock()`            |
+| 讀取感測器   | `robot.read_and_parse_sensor(packet_id)`             |
+| LED 控制  | `robot.leds(color=1)`                                |
+| 馬達開關    | `robot.motors(side_brush=True, vacuum_fan=True)`     |
 
 
 
